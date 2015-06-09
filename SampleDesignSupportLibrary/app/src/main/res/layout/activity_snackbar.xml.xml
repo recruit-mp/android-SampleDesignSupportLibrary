@@ -1,0 +1,55 @@
+<RelativeLayout
+    android:id="@+id/snackbar_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <Button
+        android:id="@+id/show_snack_bar_no_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_bar"
+        android:text="Show Snackbar（no action）"
+        android:textColor="@color/txt_reverse"/>
+
+    <Button
+        android:id="@+id/show_snack_bar_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_snack_bar_no_action"
+        android:text="Show Snackbar（action）"
+        android:textColor="@color/txt_reverse"/>
+
+
+    <Button
+        android:id="@+id/show_custom_snack_bar_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_snack_bar_action"
+        android:text=" Show Custom Snackbar（action）"
+        android:textColor="@color/txt_reverse"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_mode_edit_white_24dp"
+        app:borderWidth="0dp"
+        app:fabSize="normal"/>
+
+</RelativeLayout>

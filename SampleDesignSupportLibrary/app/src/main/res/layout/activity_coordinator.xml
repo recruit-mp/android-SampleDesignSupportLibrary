@@ -1,0 +1,88 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinator_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <Button
+            android:id="@+id/move_left_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Move Left"/>
+
+        <Button
+            android:id="@+id/move_right_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Move Right"/>
+
+        <Button
+            android:id="@+id/scale_up_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Scale up"/>
+
+        <Button
+            android:id="@+id/scale_down_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Scale Down"/>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/square_view"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="#999999"/>
+
+    <View
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@color/bg_brand"
+        app:layout_anchor="@id/square_view"/>
+
+    <View
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@color/bg_brand"
+        app:layout_anchor="@id/square_view"
+        app:layout_anchorGravity="right"/>
+
+    <View
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@color/bg_brand"
+        app:layout_anchor="@id/square_view"
+        app:layout_anchorGravity="bottom|right"/>
+
+    <View
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@color/bg_brand"
+        app:layout_anchor="@id/square_view"
+        app:layout_anchorGravity="bottom|left"/>
+
+</android.support.design.widget.CoordinatorLayout>
+

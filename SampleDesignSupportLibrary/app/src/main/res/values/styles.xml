@@ -1,0 +1,20 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat">
+
+        <item name="android:windowBackground">@color/bg_main</item>
+        <item name="colorPrimary">@color/brand_sub</item>
+        <item name="colorPrimaryDark">@color/brand_sub</item>
+        <item name="colorAccent">@color/brand_sub</item>
+        <item name="colorControlNormal">@color/brand_main</item>
+
+        <item name="android:textColor">@color/txt_main</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+</resources>

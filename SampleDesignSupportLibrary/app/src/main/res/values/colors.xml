@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="brand_main">#ff7700</color>
+    <color name="brand_sub">#ffaa33</color>
+    <color name="bg_main">#ffffff</color>
+    <color name="bg_sub">#fafafa</color>
+    <color name="bg_brand">#ffcc55</color>
+
+    <color name="txt_main">#000000</color>
+    <color name="txt_sub">#999999</color>
+    <color name="txt_reverse">#ffffff</color>
+
+    <color name="divider">#dddddd</color>
+</resources>

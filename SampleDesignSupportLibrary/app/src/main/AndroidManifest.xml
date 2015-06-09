@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="recruit_mp.co.jp.sample.design_support_library"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.NavigationViewActivity"
+            android:label="@string/navigation_view">
+        </activity>
+        <activity
+            android:name=".activity.TextInputLayoutActivity"
+            android:label="@string/text_input_layout">
+        </activity>
+        <activity
+            android:name=".activity.FloatingActionButtonActivity"
+            android:label="@string/floating_action_button">
+        </activity>
+        <activity
+            android:name=".activity.SnackbarActivity"
+            android:label="@string/snackbar">
+        </activity>
+        <activity
+            android:name=".activity.TabsActivity"
+            android:label="@string/tabLayout">
+        </activity>
+        <activity
+            android:name=".activity.TabsViewPagerActivity"
+            android:label="@string/tabLayout_viewpager">
+        </activity>
+        <activity
+            android:name=".activity.CoordinatorLayout"
+            android:label="@string/coordinator_layout">
+        </activity>
+        <activity
+            android:name=".activity.CoordinatorLayoutFABScrollingActivity"
+            android:label="@string/coordinator_layout_fab">
+        </activity>
+        <activity
+            android:name=".activity.CoordinatorLayoutCollapsingToolbarActivity"
+            android:label="@string/coordinator_layout_collapsing_toolbar">
+        </activity>
+        <activity
+            android:name=".activity.CoordinatorLayoutToolBarScrollingActivity"
+            android:label="@string/coordinator_layout_toolbar_scrolling">
+        </activity>
+
+    </application>
+
+</manifest>

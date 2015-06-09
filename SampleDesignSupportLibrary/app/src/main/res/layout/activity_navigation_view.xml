@@ -1,0 +1,44 @@
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- Your content layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tool_bar"/>
+
+    </RelativeLayout>
+
+
+    <!-- headerLayout:Drawerのヘッダー部のレイアウト -->
+    <!-- menu:DrawerのNavigationItemを指定する -->
+    <!-- itemIconTint:iconのtint colorを変更 -->
+    <!-- itemTextColor:text colorの変更 -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/brand_sub"
+        app:headerLayout="@layout/drawer_header"
+        app:itemIconTint="@drawable/drawer_text_selector"
+        app:itemTextColor="@drawable/drawer_icon_selector"
+        app:menu="@menu/drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,10 +1,12 @@
 package recruit_mp.co.jp.sample.design_support_library.activity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -14,11 +16,14 @@ import recruit_mp.co.jp.sample.design_support_library.R;
 
 /**
  * Created by tazawakenji on 15/06/02.
+ * Modified by konifar on 15/06/30.
  */
 public class NavigationViewActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
+
+    private ActionBarDrawerToggle mDrawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +36,6 @@ public class NavigationViewActivity extends AppCompatActivity {
         final ActionBar actionBar = getSupportActionBar();
 
         if (actionBar != null) {
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
@@ -59,15 +63,34 @@ public class NavigationViewActivity extends AppCompatActivity {
                 return false;
             }
         });
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close);
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
+        mDrawerLayout.setDrawerListener(mDrawerToggle);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
         switch (item.getItemId()) {
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        mDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
     }
 }

@@ -2,6 +2,9 @@
 <resources>
     <string name="app_name">"SampleDesignSupportLibrary"</string>
 
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
     <string name="navigation_view">Navigation View</string>
     <string name="text_input_layout">TextInputLayout\n(Floating labels for editing text)</string>
     <string name="floating_action_button">FloatingActionButton</string>

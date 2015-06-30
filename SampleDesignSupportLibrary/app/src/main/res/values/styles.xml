@@ -9,12 +9,18 @@
         <item name="colorControlNormal">@color/brand_main</item>
 
         <item name="android:textColor">@color/txt_main</item>
+
+        <item name="drawerArrowStyle">@style/AppDrawerArrowToggle</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="AppDrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/txt_reverse</item>
     </style>
 
 </resources>
